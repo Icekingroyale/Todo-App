@@ -1,0 +1,35 @@
+{% extends 'base.html' %} 
+
+
+{% block head %} 
+    <title>The App</title> 
+{% endblock %}
+
+
+
+
+{% block body%}
+    <div class="app-container">
+        <h1>Todo App</h1>
+
+
+
+        <table>
+          <tr>
+            <th>Task</th>
+            <th>Added</th>
+            <th>Actions</th>
+          </tr>
+          <tr>
+            <td>Content</td>
+            <td>Date</td>
+            <td>More</td>
+          </tr>
+        </table>
+  
+        <form action="">
+          <input type="text" name="content" id="content" />
+          <input type="submit" value="Add Task" id="btn-add"/>
+        </form>
+      </div>
+    {% endblock %}
