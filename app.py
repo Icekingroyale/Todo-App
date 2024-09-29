@@ -38,9 +38,40 @@ def index():
     else:
         # Retrieve all tasks from the database
         tasks = MyTask.query.order_by(MyTask.created).all()
-        return render_template('index.html', task=tasks)
+        return render_template('index.html', tasks=tasks)
+
+@app.route('/edit/<int:id>', methods=['GEt', 'POST'])
+def edit(id: int):
+    task_to_edit = MyTask.query.get_or_404(id)
+    if request.method == 'POST':
+        task_to_edit.content = request.form['content']
+        try:
+            db.session.commit()
+            return redirect('/')
+        except Exception as e:
+            return f'ERROR:{e}'
+        
+    else:
+        return render_template('edit.html', task=task_to_edit)
 
 
+@app.route('/delete/<int:id>')
+def delete(id: int):
+    task_to_delete = MyTask.query.get_or_404(id)
+    try:
+        db.session.delete(task_to_delete)
+        db.session.commit()
+        return redirect('/')
+    except Exception as e:
+        return f'ERROR:{e}'
+
+
+
+
+
+
+
+# running in debug mode
 if __name__ in '__main__':
     with app.app_context():
         db.create_all()
