@@ -1,5 +1,5 @@
 :root {
-  --pri-color: purple;
+  --pri-color: rgb(99, 0, 99);
   --sec-color: white;
   --dark-color: rgb(65, 64, 64);
   --font-size: 16px;
@@ -25,9 +25,10 @@ body {
   flex-direction: column;
   align-items: center;
   width: 70%;
+  border-radius: 10px;
 
   h3 {
-    color: red;
+    color: rgb(255, 11, 11);
   }
 
   table {
@@ -62,10 +63,14 @@ body {
 
 form {
   margin: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
 
   #btn-add {
     background-color: rgb(3, 224, 3);
     border-radius: 8px;
+    height: 20px;
   }
 
   input,
