@@ -1,97 +1,87 @@
 :root {
-    --pri-color: purple;
-    --sec-color: white;
-    --dark-color: rgb(65, 64, 64);
-    --font-size: 16px;
+  --pri-color: purple;
+  --sec-color: white;
+  --dark-color: rgb(65, 64, 64);
+  --font-size: 16px;
+}
+
+body {
+  background-color: var(--dark-color);
+  color: var(--sec-color);
+  font-size: var(--font-size);
+  font-family: "Roboto", "Poppins", "Inter", "Nunito", "Lato", "Open Sans",
+    sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app-container {
+  /* border: 2px solid; */
+  padding: 10px;
+  background-color: var(--pri-color);
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+
+  h3 {
+    color: red;
   }
-  
-  body {
-    background-color: var(--dark-color);
-    color: var(--sec-color);
-    font-size: var(--font-size);
-    font-family: 'Roboto', 'Poppins', 'Inter', 'Nunito', 'Lato', 'Open Sans', sans-serif; 
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
 
+  table {
+    width: 100%;
+    margin-top: 20px;
 
-.app-container{
-    border: 2px solid red;
-    padding: 10px;
-    background-color: var(--pri-color);
-    margin: 50px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 70%;
+    th,
+    td {
+      padding: 10px;
+      border: 1px solid black;
+    }
+    th {
+      background-color: rgb(128, 128, 4);
+      padding: 5px;
+    }
 
-    h3{
+    td {
+      text-align: center;
+    }
+
+    a {
       color: red;
-    }
-
-    table{
-      width: 100%;
-      margin-top: 20px;
-
-      th, td{
-        padding: 10px;
-        border: 1px solid black;       
-        
-      }
-      th{
-        background-color: rgb(128, 128, 4);
-        padding: 5px;
-      }
-
-      td{
-        text-align: center;
-          
-        }
-        
-        a{
-          color: red;
-          text-decoration: none;
-          margin: 10px;
-        }
-        
-        #edit{
-          color: rgb(8, 185, 255);
-        }
-      }
-
-    }
-
-
-    form{
+      text-decoration: none;
       margin: 10px;
-
-      #btn-add{
-        background-color: rgb(3, 224, 3);
-        border-radius: 8px;
-        
-      }
-      
-      input, button{
-        border-radius: 8px;
-        cursor: pointer;
-      }
-      #e-edit{
-        background-color: rgb(3, 224, 3);
-        &:hover{
-          background-color: rgb(88, 248, 88);
-          cursor: pointer;
-        }
-
-      }
-      
-
     }
 
-
-
-    h1{
-      color: rgb(9, 118, 243);
+    #edit {
+      color: rgb(8, 185, 255);
     }
+  }
+}
+
+form {
+  margin: 10px;
+
+  #btn-add {
+    background-color: rgb(3, 224, 3);
+    border-radius: 8px;
+  }
+
+  input,
+  button {
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  #e-edit {
+    background-color: rgb(3, 224, 3);
+    &:hover {
+      background-color: rgb(88, 248, 88);
+      cursor: pointer;
+    }
+  }
+}
+
+h1 {
+  color: rgb(9, 118, 243);
 }
