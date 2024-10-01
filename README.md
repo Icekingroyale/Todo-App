@@ -1,4 +1,4 @@
-# To-Do App
+# README - TODO APP
 
 This is a basic To-Do application built using Python (Flask), JavaScript, HTML, and CSS. The app provides full CRUD (Create, Read, Update, Delete) functionality and uses SQLAlchemy with SQLite3 for database management.
 
