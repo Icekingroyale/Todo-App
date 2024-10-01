@@ -2,11 +2,12 @@ from flask import Flask, render_template, redirect, request
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
-#init the app
+# init the app
 app = Flask(__name__)
 
-#link database with app
+# link database with app
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
 db = SQLAlchemy(app)
 
 
@@ -19,6 +20,10 @@ class MyTask(db.Model):
 
     def __repr__(self) -> str:
         return f'Task {self.id}'
+
+
+with app.app_context():
+    db.create_all()
 
 
 # Routes to Webpages
@@ -42,6 +47,7 @@ def index():
         tasks = MyTask.query.order_by(MyTask.created).all()
         return render_template('index.html', tasks=tasks)
 
+
 @app.route('/edit/<int:id>', methods=['GEt', 'POST'])
 def edit(id: int):
     task_to_edit = MyTask.query.get_or_404(id)
@@ -52,7 +58,7 @@ def edit(id: int):
             return redirect('/')
         except Exception as e:
             return f'ERROR:{e}'
-        
+
     else:
         return render_template('edit.html', task=task_to_edit)
 
@@ -68,14 +74,6 @@ def delete(id: int):
         return f'ERROR:{e}'
 
 
-
-
-
-
-
 # running in debug mode
-if __name__ in '__main__':
-    with app.app_context():
-        db.create_all()
-
+if __name__ == '__main__':
     app.run(debug=True)
