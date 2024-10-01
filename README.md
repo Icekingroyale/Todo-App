@@ -76,7 +76,7 @@ The app is designed with a clean and simple user interface to enhance productivi
 - **Add support for multiple users** to the application
 
 ## Credits
-- This project was created by [icekingroyale](x.com/icekingroyale) This project was developed as part of the CS50x final project
+- This project was created by [icekingroyale](https://x.com/icekingroyale) This project was developed as part of the CS50x final project
 
 
 
