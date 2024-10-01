@@ -50,13 +50,16 @@ body {
     }
 
     a {
-      color: red;
       text-decoration: none;
       margin: 10px;
     }
 
-    #e-edit {
+    #edit {
       color: rgb(8, 185, 255);
+    }
+
+    #delete{
+      color: red;
     }
   }
 }
