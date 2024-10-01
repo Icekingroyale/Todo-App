@@ -56,6 +56,7 @@ The app is designed with a clean and simple user interface to enhance productivi
 
 ## Features
 - **Full CRUD functionality** (Create, Read, Update, Delete).
+- **Implement search option** to find a particular task
 - Intuitive and user-friendly interface.
 - Data persistence using SQLite3.
 - User-interface updates using JavaScript
@@ -68,7 +69,6 @@ The app is designed with a clean and simple user interface to enhance productivi
 - **SQLite3** (as the database)
 
 ## Future Improvements
-- **Implement search option** to find a particular task
 - **Implement user authentication** to restrict access to tasks
 - **Add due dates and reminders** to tasks
 - **Integrate with a calendar** to display tasks on a calendar view

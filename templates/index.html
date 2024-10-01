@@ -4,6 +4,9 @@
 <div class="app-container">
   <h1>Todo App</h1>
 
+  <!-- Add task search input -->
+  <input type="text" id="taskSearch" placeholder="Search tasks..." />
+
   {% if tasks | length < 1 %}
   <h3>No tasks yet!</h3>
   {% else %}
@@ -29,7 +32,7 @@
 
   {% endif %}
  <form action="/" method="post">
-    <input type="text" name="content" id="content" />
+    <input type="text" name="content" id="content" placeholder="Enter your task" />
     <input type="submit" value="Add Task" id="btn-add" />
   </form>
 </div>
