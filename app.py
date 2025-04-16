@@ -48,7 +48,7 @@ def index():
         return render_template('index.html', tasks=tasks)
 
 
-@app.route('/edit/<int:id>', methods=['GEt', 'POST'])
+@app.route('/edit/<int:id>', methods=['GET', 'POST'])
 def edit(id: int):
     task_to_edit = MyTask.query.get_or_404(id)
     if request.method == 'POST':
