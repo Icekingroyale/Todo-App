@@ -6,10 +6,6 @@ This is a basic To-Do application built using Python (Flask), JavaScript, HTML, 
 
 You can check out the live version of the app here: [Live To-Do App](https://icekingroyale.pythonanywhere.com/)
 
-## Video Demo
-
-Watch the video demo here: [Video Demo | To-Do App](https://drive.google.com/file/d/1j7lfWszIdFmwaLHP0qCteL0j1rJ2ains/view?usp=drivesdk)
-
 
 ## Description
 
